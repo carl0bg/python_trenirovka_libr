@@ -1,11 +1,10 @@
-""" from collections import namedtuple
+def tpl_sort(s):
+    tupl = tuple(s)
+    for per in tupl:
+        if type(per) is not int:
+            return tupl
+    print('hel')
+    return sorted(tupl)
 
-Person = namedtuple('Person', ['name', 'age', 'city'])
-per = Person('Alice', '18', 'Arz')
-print(per.name, per.age, per.city) """ #Shift+Alt+A
 
-""" from pathlib import Path
-path = Path('c:\\Users\\serka\\Downloads') #по определенным каталогам(путь)
-for file in path.glob('*.docx'): #ищет обьекты которые docx
-    print(file) """
-
+print(tpl_sort([1000, 45.3, 40, 30]))
